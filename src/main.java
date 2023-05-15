@@ -2,12 +2,17 @@ public class main {
     public static void main(String[] args) {
         int startBalance = (300); // Баланс клиента до выполнения пополнения
         int payment = (1001); // Сумма пополнения счета
-        int bonus; // Бонус, его расчет ниже
+/*        int bonus; // Бонус, его расчет ниже
         if (payment > 1000) {
             bonus = (payment / 100);
         } else {
             bonus = 0;
         }  // окончание расчета бонуса
+*/
+//      Использование тернарного оператора:
+        int minimalSummForBonus = 1000;
+        int bonus = minimalSummForBonus > 1000 ? payment / 100 : 0;
+
         int endBalance = (startBalance + payment + bonus); //  Итоговая сумма после пополнения с учетом бонусов
 
         System.out.println("Баланс: " + startBalance);
